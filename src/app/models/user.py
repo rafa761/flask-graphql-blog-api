@@ -27,7 +27,7 @@ class UserModel(BaseModel):
 
     # Relationships
     posts = db.relationship(
-        "Post", backref="author", lazy="dynamic", cascade="all, delete-orphan"
+        "PostModel", backref="author", lazy="dynamic", cascade="all, delete-orphan"
     )
 
     def __repr__(self):
