@@ -5,7 +5,7 @@ from app.extensions import db
 from app.models.base import BaseModel
 
 
-class Post(BaseModel):
+class PostModel(BaseModel):
     """Blog post model with content and metadata."""
 
     __tablename__ = "posts"
@@ -29,7 +29,7 @@ class Post(BaseModel):
     )
 
     def __repr__(self):
-        return f'<Post "{self.title}">'
+        return f'<PostModel "{self.title}">'
 
     @property
     def tag_list(self):
@@ -74,7 +74,9 @@ class Post(BaseModel):
         # Ensure uniqueness
         base_slug = slug
         counter = 1
-        while Post.query.filter_by(slug=slug).filter(Post.id != self.id).first():
+        while (
+            PostModel.query.filter_by(slug=slug).filter(PostModel.id != self.id).first()
+        ):
             slug = f"{base_slug}-{counter}"
             counter += 1
 
