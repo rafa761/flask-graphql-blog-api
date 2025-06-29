@@ -733,3 +733,7 @@ project-structure.txt
 
 # Claude control file
 CLAUDE.md
+
+# Sqlite DB
+src/instance/*
+*.db
