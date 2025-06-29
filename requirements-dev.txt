@@ -9,6 +9,6 @@ pre-commit==4.2.0
 pytest==8.4.1
 pytest-asyncio==1.0.0
 pytest-cov==6.2.1
-ruff==0.12.0
+ruff==0.12.1
 typer==0.16.0
 types-passlib==1.7.7
