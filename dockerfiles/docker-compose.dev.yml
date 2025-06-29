@@ -1,0 +1,20 @@
+services:
+  app:
+    container_name: flask-blog-api
+    build:
+      context: ..
+      dockerfile: dockerfiles/Dockerfile.dev
+    ports:
+      - "5000:5000"
+    volumes:
+      - ../src:/app/src
+      - ../tests:/app/tests
+    env_file:
+      - ../.env
+    networks:
+      - flask_blog_api_network
+    restart: unless-stopped
+
+networks:
+  flask_blog_api_network:
+    driver: bridge
