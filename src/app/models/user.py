@@ -5,19 +5,19 @@ from app.extensions import db
 from app.models.base import BaseModel
 
 
-class User(BaseModel):
-    """User model for authentication and blog authoring."""
+class UserModel(BaseModel):
+    """UserModel model for authentication and blog authoring."""
 
     __tablename__ = "users"
 
-    # User identification
+    # UserModel identification
     username = db.Column(db.String(80), unique=True, nullable=False, index=True)
     email = db.Column(db.String(120), unique=True, nullable=False, index=True)
 
     # Authentication
     password_hash = db.Column(db.String(255), nullable=False)
 
-    # User information
+    # UserModel information
     first_name = db.Column(db.String(50), nullable=True)
     last_name = db.Column(db.String(50), nullable=True)
     bio = db.Column(db.Text, nullable=True)
@@ -31,7 +31,7 @@ class User(BaseModel):
     )
 
     def __repr__(self):
-        return f"<User {self.username}>"
+        return f"<UserModel {self.username}>"
 
     def set_password(self, password):
         """Hash and set user password."""

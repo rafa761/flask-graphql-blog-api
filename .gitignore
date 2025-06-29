@@ -2,7 +2,7 @@
 # Covers JetBrains IDEs: IntelliJ, RubyMine, PhpStorm, AppCode, PyCharm, CLion, Android Studio, WebStorm and Rider
 # Reference: https://intellij-support.jetbrains.com/hc/en-us/articles/206544839
 
-# User-specific stuff
+# UserModel-specific stuff
 .idea/**/workspace.xml
 .idea/**/tasks.xml
 .idea/**/usage.statistics.xml
@@ -11,7 +11,7 @@
 .idea/vcs.xml
 .idea/ruff.xml
 
-# AWS User-specific
+# AWS UserModel-specific
 .idea/**/aws.xml
 
 # Generated files
@@ -83,9 +83,9 @@ fabric.properties
 # Covers JetBrains IDEs: IntelliJ, RubyMine, PhpStorm, AppCode, PyCharm, CLion, Android Studio, WebStorm and Rider
 # Reference: https://intellij-support.jetbrains.com/hc/en-us/articles/206544839
 
-# User-specific stuff
+# UserModel-specific stuff
 
-# AWS User-specific
+# AWS UserModel-specific
 
 # Generated files
 
@@ -149,14 +149,14 @@ fabric.properties
 ##
 ## Get latest from https://github.com/github/gitignore/blob/main/VisualStudio.gitignore
 
-# User-specific files
+# UserModel-specific files
 *.rsuser
 *.suo
 *.user
 *.userosscache
 *.sln.docstates
 
-# User-specific files (MonoDevelop/Xamarin Studio)
+# UserModel-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
 
 # Mono auto generated files
