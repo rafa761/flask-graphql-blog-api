@@ -4,13 +4,12 @@ A modern blog API built with Flask and GraphQL using Strawberry.
 
 ## Features
 
-- 🚀 GraphQL API with Strawberry
-- 🔐 JWT Authentication
-- 📝 Blog post management
-- 👥 UserModel management
-- 🎮 GraphQL Playground
-- 🐳 Docker support
-- 🧪 Testing setup
+- GraphQL API with Strawberry
+- JWT Authentication
+- Blog post management
+- UserModel management
+- GraphQL Playground
+- Docker support
 
 ## Quick Start
 
@@ -123,6 +122,10 @@ query {
   }
 }
 ```
+
+![Graphql Login](/docs/images/graphql-api-1.png)
+
+![Graphql Posts](/docs/images/graphql-api-2.png)
 
 ## Development
 

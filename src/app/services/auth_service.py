@@ -49,11 +49,11 @@ class AuthService:
             if not UserModel.is_active:
                 return {"error": "Account is deactivated", "user": None, "token": None}
 
-            if not UserModel.check_password(password):
+            if not user.check_password(password):
                 return {"error": "Invalid password", "user": None, "token": None}
 
             # Create access token
-            access_token = create_access_token(identity=UserModel.id)
+            access_token = create_access_token(identity=user.id)
 
             return {"error": None, "user": user, "token": access_token}
 

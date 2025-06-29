@@ -11,6 +11,9 @@ def create_app(config_class=Config):
     app = Flask(__name__)
     app.config.from_object(config_class)
 
+    # DEBUG: Print the actual database URI being used
+    print(f"Database URI: {app.config['SQLALCHEMY_DATABASE_URI']}")
+
     # Initialize extensions
     init_extensions(app)
 
