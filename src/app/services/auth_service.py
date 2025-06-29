@@ -39,9 +39,9 @@ class AuthService:
         """Authenticate user and return access token."""
         try:
             # Find user by username or email
-            user = UserModel.find_by_username(username) or UserModel.find_by_email(
-                username
-            )
+            user = UserModel.find_by_username(username)
+            if not user:
+                user = UserModel.find_by_email(username)
 
             if not user:
                 return {"error": "User not found", "user": None, "token": None}

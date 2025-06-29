@@ -3,7 +3,7 @@ from flask import Flask
 
 from app.api import create_graphql_blueprint
 from app.config import Config
-from app.extensions import init_extensions
+from app.extensions import db, init_extensions
 
 
 def create_app(config_class=Config):
@@ -23,8 +23,6 @@ def create_app(config_class=Config):
 
     # Create database tables
     with app.app_context():
-        from app.extensions import db
-
         db.create_all()
 
     return app
